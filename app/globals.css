@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  font-weight: 900;
+}
+
+.profile_img {
+  animation: profile-img-animate 7s ease-in-out infinite 2s;
+}
+
+.profile_img:hover {
+  box-shadow: 0 0 70px white;
+}
+
+.theme_icons:hover {
+  box-shadow: 0 0 5px rgb(207, 234, 248), 0 0 17px rgb(240, 201, 142),
+    0 0 25px rgb(240, 214, 142), 0 0 50px rgb(240, 214, 142),
+    0 0 100px rgb(240, 214, 142);
+}
+
+.nav_links:hover {
+  text-shadow: 0 0 6px rgb(162, 107, 250), 0 0 17px rgb(95, 164, 255),
+    0 0 25px rgb(113, 151, 255), 0 0 50px rgb(240, 214, 142),
+    0 0 100px rgb(240, 214, 142);
+}
+
+.bg_texti {
+  text-shadow: -6px -6px 10px rgb(207, 234, 248), 0 0 10px rgb(240, 201, 142),
+    0 0 25px rgb(240, 214, 142), 0 0 50px rgb(135, 108, 255),
+    0 0 100px rgb(108, 92, 255);
+}
+
+.profile_text {
+  -webkit-text-stroke: 1px #fff;
+  background: url(../public/back.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+.profile_text_G {
+  -webkit-text-stroke: 1px #fff;
+  background: url(../public/back.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+.profile_text_V {
+  -webkit-text-stroke: 1px #fff;
+  background: url(../public/back.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+@keyframes profile-img-animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    border-color: rgb(134, 152, 255);
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    border-color: rgb(98, 104, 255);
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    border-color: rgb(150, 106, 252);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border !scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button {
+    @apply active:outline-none;
+  }
+}
+
+@layer utilities {
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
+}
